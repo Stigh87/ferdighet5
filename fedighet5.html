@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    h2{
+
+    }
+    
+    p{
+        padding-bottom: 20px;
+    }
+
+    #onload{
+        padding-bottom: 50px;
+    }
+
+    #frascript{
+        padding-bottom: 50px;
+    }
+
+
+
+</style>
+
+
+<body>
+    <h2>Ferdighet 5</h2>
+    <hr>
+    <p>Lag en enkel html-side som legger til tekst i en div både direkte i script-taggen og via en funksjon som blir kalt fra body sin onload-event. 
+        <br>Logg tidspunktet for begge deler vha. denne koden: 
+        <br>document.getElementById('a').innerHTML = '' + new Date().toTimeString();
+        <br>Legg inn et stort bilde på websiden og se hvordan dette påvirker tidene. 
+        <br>Husk å reloade siden med ctrl-f5 for å tvinge den til å laste inn bildet - og ikke bare hente det fra cache. 
+    </p>
+    
+
+    <div>1. Ren tekst som ligger direkte i body:</div>
+    <div id="onload"></div>
+
+    <div id="frascript"></div>
+
+
+    <div>3. Tid som kommer nå kanpp trykkes:</div>
+    <button onclick="trykk()">TRYKK</button> 
+    <div id="vtrykk"> - </div>
+
+
+    <img src ="landskap.jpg">
+
+    <script>
+        document.getElementById('onload').innerHTML = 
+        '-' + new Date().toTimeString();
+
+        document.getElementById('frascript').innerHTML = 
+        '2. Tid fra script: ' + new Date().toTimeString();
+
+
+        function trykk(){
+            document.getElementById('vtrykk').innerHTML = 
+            '-' + new Date().toTimeString();
+        }
+
+
+
+    </script>
+
+
+
+    </body>
+
+    <!-- document.getElementById('a').innerHTML = '' + new Date().toTimeString(); / Kode for å logge tidspunk. -->
+
+
+
+</html>
